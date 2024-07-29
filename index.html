@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Approval page 1</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    body{
+      background-color: black;
+      font-family: Arial;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+    main>div:nth-child(1) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .meet-box{
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      max-width: 300px;
+      margin-top: 60px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.678);
+      font-size: 14px;
+      padding-bottom: 25px;
+    }
+    .meet-box>header>img {
+      width: 100%;
+      height: 40px;
+      object-fit: contain;
+    }
+    .meet-box .visitor-box{
+      padding: 15px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .meet-box .visitor-box img,
+    .host-detail img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .meet-box button {
+      border: none;
+      background-color: rgba(244, 223, 131, 0.896);
+      padding: 10px 0;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 30px;
+      color: rgb(72, 71, 71);
+      margin-bottom: 15px;
+    }
+    .host-detail {
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .host-detail img {
+      width: 35px;
+      height: 35px;
+    }
+
+    .approved,
+    .not-approved{
+      position: absolute;
+      z-index: 0;
+      height: 80%;
+      width: 100%;
+      bottom: 0;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 180px;
+      font-size: 18px;
+    }
+    .approved>i,
+    .not-approved>i{
+      font-size: 50px;
+      color: rgb(1, 174, 1);
+    }
+    .approved>p:nth-child(3){
+      margin-top: 22px;
+      margin-bottom: 2px;
+      color: rgb(96, 96, 96);
+    }
+    .approved>p:nth-child(4){
+      font-size: 45px;
+      font-weight: bold;
+      letter-spacing: 8px;
+    }
+  </style>
+
+</head>
+<body>
+  <main>
+    <div>
+      <div class="meet-box">
+
+        <header style="border-bottom: 1px solid rgba(128, 128, 128, 0.486);">
+          <img src="./URBAN VAULT LOGO.png" width="30px" alt="Urban Vault Logo">
+        </header>
+
+        <div class="visitor-box">
+          <div class="visitor-details">
+            <p class="name" style="font-size: 17px; margin-bottom: 7px;">Name</p>
+            <p class="ph-no" style="font-size: 14px; color: gray;">1234567878</p>
+            <p class="building-no" style="font-size: 14px; color: gray;">UV 477</p>
+          </div>
+          <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-business-user-profile-vector-png-image_1541960.jpg" alt="visitor-image">
+        </div>
+
+        <button>Meeting</button>
+        <p style="font-weight: 600;">Host Detail</p>
+
+        <div class="host-detail">
+          <img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-business-user-profile-vector-png-image_1541960.jpg" alt="host image">
+          <p>Name of User, <span>Designation</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="approved">
+      <i class='bx bxs-check-circle'></i>
+      <p>Approved</p>
+      <p>Your Guest Code is</p>
+      <p>524127</p>
+    </div>
+
+    <!-- <div class="not-approved">
+      <i class='bx bxs-x-circle' style="color: red;"></i>
+      <p style="margin-top: 5px; font-size: 18px;">Rejected!!</p> -->
+    </div>    
+  </main>
+</body>
+</html>
